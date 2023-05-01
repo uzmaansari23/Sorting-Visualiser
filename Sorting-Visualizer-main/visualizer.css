@@ -1,0 +1,588 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@600&family=Homemade+Apple&family=Courgette&family=Rancho&family=Luxurious+Roman&family=Lobster+Two&family=Indie+Flower&family=Raleway:ital,wght@1,800&family=Sacramento&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Luxurious Roman', cursive;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+body {
+    background-color: rgb(32, 35, 48);
+    /* overflow-y: hidden; */
+    overflow-x: hidden;
+    perspective: 6000px;
+}
+
+.page{
+    height: 100vh;
+    width: 100%;
+    /* background-color: black; */
+}
+
+.animation{
+    /* background-color: black; */
+    height: 500px;
+    width: 100%;
+    transform: translateY(-400px) skewY(-12.5deg);
+    /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+	background-size: 400% 400%;
+	animation: gradient 7s ease infinite;
+    opacity: 0.8;
+	/* height: 100vh; */
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+section img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+
+/* h2{
+    background: -webkit-linear-gradient(#786734, #567544);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
+
+
+
+
+
+
+
+
+
+/* Navbar Section */
+nav {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    position: sticky;
+    margin-bottom: 55px;
+    /* background-color: rgb(26, 26, 26); */
+}
+
+
+
+/* Logo sub-section */
+.logo a {
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 40px;
+    padding: 5px;
+    font-family: 'Sacramento', cursive;
+    font-weight: bold;
+    /* background-color: chartreuse;
+    border: 2px solid crimson; */
+}
+
+
+
+/* Center links */
+.center {
+    display: flex;
+    justify-content: space-around;
+    width: 650px;
+    padding: 5px;
+    list-style: none;
+    /* background-color: cyan;
+    border: 2px solid purple; */
+}
+
+.center a {
+    color: black;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 18px;
+    font-family: 'Courgette', cursive;
+    font-weight: bold;
+}
+
+.center li {
+    list-style-type: none;
+}
+
+
+
+
+
+
+
+
+/* Account or Sign in Section CSS */
+.contact {
+    padding: 5px;
+    /* border: 1px solid rgb(0, 0, 0); */
+    border-radius: 16.5px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.contact a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-family: 'Courgette', cursive;
+    font-size: 20px;
+    /* background-color: rgb(143, 138, 138); */
+}
+
+
+.contact:hover {
+
+    background-color: rgb(82, 77, 77);
+    transition: 0.5s ease-out;
+}
+
+
+
+
+
+
+
+
+
+/* Main Landing Page section */
+.bodyBackground {
+    height: 100vh;
+}
+
+/* The heading animation stuff */
+
+.container {
+    /* background-color: rgb(99, 98, 98); */
+    transform-style: preserve-3d;
+    z-index: 100;
+}
+
+.containerForMotion {
+    margin-right: 700px;
+}
+
+.main-heading {
+    width: 90%;
+    height: 350px;
+}
+
+.main-heading .svg {
+    margin-right: 90px;
+}
+
+h1 {
+    position: absolute;
+    top: 120px;
+    left: 140px;
+    color: #fff;
+    /* color: #FFD700; */
+    width: 100%;
+    margin-top: 48px;
+}
+
+span {
+    opacity: 0;
+    transition: all 1s ease;
+    transform: translateY(100px);
+    display: inline-block;
+    /*We did this because the transform won't work without it as span is a inline element and that is why we made the display inline block */
+    font-size: 6rem;
+    font-family: 'Lobster Two', cursive;
+    font-weight: lighter;
+    padding: 0px 2.5px;
+    /* For the 3d text of the heading */
+    text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 18px 6px rgba(16, 16, 16, 0.4),
+        1px 22px 10px rgba(16, 16, 16, 0.2),
+        1px 25px 35px rgba(16, 16, 16, 0.2),
+        1px 30px 60px rgba(16, 16, 16, 0.4);
+    /* background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+
+
+span.fade {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
+
+
+/* Sorting Heading SVG Animation */
+
+#sortingTitle {
+    position: absolute;
+    top: 40%;
+    left: 210px;
+    transform: translate(-50%, -50%);
+    animation: fill 1.5s ease forwards 2.5s;
+}
+
+
+#sortingTitle path:nth-child(1) {
+    stroke-dasharray: 355;
+    stroke-dashoffset: 355;
+    animation: line-anim 2s ease forwards;
+}
+
+#sortingTitle path:nth-child(2) {
+    stroke-dasharray: 265;
+    stroke-dashoffset: 265;
+    animation: line-anim 2s ease forwards 0.3s;
+}
+
+#sortingTitle path:nth-child(3) {
+    stroke-dasharray: 188;
+    stroke-dashoffset: 188;
+    animation: line-anim 2s ease forwards 0.6s;
+}
+
+#sortingTitle path:nth-child(4) {
+    stroke-dasharray: 225;
+    stroke-dashoffset: 225;
+    animation: line-anim 2s ease forwards 0.9s;
+}
+
+#sortingTitle path:nth-child(5) {
+    stroke-dasharray: 151;
+    stroke-dashoffset: 151;
+    animation: line-anim 2s ease forwards 1.2s;
+}
+
+#sortingTitle path:nth-child(6) {
+    stroke-dasharray: 303;
+    stroke-dashoffset: 303;
+    animation: line-anim 2s ease forwards 1.5s;
+}
+
+#sortingTitle path:nth-child(7) {
+    stroke-dasharray: 462;
+    stroke-dashoffset: 462;
+    animation: line-anim 2s ease forwards 1.8s;
+}
+
+
+@keyframes line-anim {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill {
+    from {
+        fill: transparent;
+    }
+
+    to {
+        fill: white;
+    }
+}
+
+/* For the top animation */
+.designShape{
+	width: 100%;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 7s ease infinite;
+	transform: skewY(-10deg);
+	position: absolute;
+	bottom: 500px;
+	height: 600px;
+}
+
+.unsorted{
+	position: absolute;
+	left: 150px;
+	top: 170px;
+	height: 400px;
+	width: 500px;
+	display: flex;
+	justify-content: space-around;
+	z-index: -2;
+}
+
+.ublock1{
+	height: 360px;
+	width: 50px;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 7s ease infinite;
+    border-radius: 0px 0px 30px 0px;
+}
+
+.ublock2{
+	height: 240px;
+	width: 50px;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 7s ease infinite;
+    border-radius: 0px 0px 30px 0px;
+}
+
+.ublock3{
+	height: 280px;
+	width: 50px;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 7s ease infinite;
+    border-radius: 0px 0px 30px 0px;
+}
+
+.ublock4{
+	height: 320px;
+	width: 50px;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 7s ease infinite;
+    border-radius: 0px 0px 30px 0px;
+}
+
+.ublock5{
+	height: 200px;
+	width: 50px;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 7s ease infinite;
+    border-radius: 0px 0px 30px 0px;
+}
+
+.ublock6{
+	height: 400px;
+	width: 50px;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 7s ease infinite;
+    border-radius: 0px 0px 30px 0px;
+}
+
+.sorted{
+	position: absolute;
+	right: 20px;
+	top:44px;
+	height: 500px;
+	width: 530px;
+	display: flex;
+	justify-content: space-around;
+	z-index: -2;
+  margin: 10px 5px;
+}
+
+.sblock1{
+	height: 280px;
+	width: 50px;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 7s ease infinite;
+    border-radius: 0px 0px 30px 0px;
+}
+
+.sblock2{
+	height: 320px;
+	width: 50px;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 7s ease infinite;
+    border-radius: 0px 0px 30px 0px;
+}
+
+.sblock3{
+	height: 380px;
+	width: 50px;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 7s ease infinite;
+    border-radius: 0px 0px 30px 0px;
+}
+
+.sblock4{
+	height: 420px;
+	width: 50px;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 7s ease infinite;
+    border-radius: 0px 0px 30px 0px;
+}
+
+.sblock5{
+	height: 460px;
+	width: 50px;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 7s ease infinite;
+    border-radius: 0px 0px 30px 0px;
+}
+
+.sblock6{
+	height: 500px;
+	width: 50px;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 7s ease infinite;
+    border-radius: 0px 0px 30px 0px;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* For the mobile view of the site */
+.mobile {
+    display: none;
+}
+
+.mobile div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* For Mobile Icon Animation */
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media screen and (max-width: 688px) {
+    .center {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .center {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        /* background-color: rosybrown; */
+        background-color: rgb(105, 102, 102);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .center li {
+        opacity: 0;
+    }
+
+    .mobile {
+        display: block;
+        cursor: pointer;
+    }
+
+    .account {
+        display: none;
+    }
+}
+
+@media screen and (max-width : 930px) {
+    span {
+        font-size: 7rem;
+    }
+}
+
+@media screen and (max-width : 730px) {
+    span {
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width : 850px) {
+    .center a {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width : 750px) {
+    .center a {
+        font-size: 14px;
+    }
+}
+
+
+
+.center-active {
+    transform: translateX(0%);
+}
+
+@keyframes centerLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}

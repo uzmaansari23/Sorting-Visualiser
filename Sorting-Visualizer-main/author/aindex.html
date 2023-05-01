@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="astyles.css">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+
+
+
+  <title>Authors</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <script>
+    window.console = window.console || function (t) { };
+  </script>
+
+
+
+  <script>
+    if (document.location.search.match(/type=embed/gi)) {
+      window.parent.postMessage("resize", "*");
+    }
+  </script>
+
+
+</head>
+
+<body translate="no">
+  <div class="logo">
+    <a href="sorting_visualizer.html">SV</a>
+  </div>
+  <div class="cards-wrapper">
+    <div class="card-wrapper">
+      <div class="card-1 card-object card-object-hf"><a class="face front" href="#">
+          <div class="title-wrapper">
+            <div class="title">Tasmiya</div>
+            <div class="subtitle">Hey y'all!</div>
+          </div>
+        </a><a class="face back" href="#">
+          <div class="img-wrapper">
+            <div class="avatar"></div>
+          </div>
+          <div class="info-wrapper">
+            <div class="info-title">Tasmiya Khan</div>
+            <p class="info-content">
+              I'm a student and coder in process.I have got my hands on languages like C,Python,Java and web development
+              too. I❤️reading, baking, coffee and biryani.
+            </p>
+          </div>
+        </a></div>
+    </div>
+    <div class="card-wrapper">
+      <div class="card-2 card-object card-object-hf"><a class="face front" href="#">
+          <div class="title-wrapper">
+            <div class="title">Saba</div>
+            <div class="subtitle">Hey!</div>
+          </div>
+        </a><a class="face back" href="#">
+          <div class="img-wrapper">
+            <div class="avatar"></div>
+          </div>
+          <div class="info-wrapper">
+            <div class="info-title">Saba Mazhar</div>
+            <p class="info-content">
+              An engineering student and a programmer in process.I love playing badminton and singing .
+            </p>
+          </div>
+        </a></div>
+    </div>
+    <div class="card-wrapper">
+      <div class="card-3 card-object card-object-hf"><a class="face front" href="#">
+          <div class="title-wrapper">
+            <div class="title">Anmol</div>
+            <div class="subtitle">Hello</div>
+          </div>
+        </a><a class="face back" href="#">
+          <div class="img-wrapper">
+            <div class="avatar"></div>
+          </div>
+          <div class="info-wrapper">
+            <div class="info-title">Anmol Chauhan</div>
+            <p class="info-content">
+              I am a CSE student and have a good grasp in C and C++.I also know Web Developement and I love to cook and
+              I am a Badminton Lover.
+            </p>
+          </div>
+        </a></div>
+    </div>
+  </div>
+
+  <script
+    src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+  <script id="rendered-js">
+    var $cards = $('.card-object'),
+      $faceButtons = $('.face');
+
+    $faceButtons.on('click', flipCard);
+
+    function flipCard(event) {
+      event.preventDefault();
+
+      var $btnFace = $(this),
+        $card = $btnFace.parent('.card-object');
+
+      if ($card.hasClass('flip-in')) {
+        closeCards();
+      } else {
+        closeCards();
+        openCard($card);
+      }
+
+    }
+
+    function closeCards() {
+      $cards.each(function () {
+        $(this).
+          filter('.flip-in').
+          removeClass('flip-in').
+          queue(function () {
+            // Force reflow hack
+            var reflow = this.offsetHeight;
+            $(this).
+              addClass('flip-out').
+              dequeue();
+          });
+
+      });
+    }
+
+    function openCard($card) {
+      $card.
+        removeClass('flip-out').
+        queue(function () {
+          // Force reflow hack
+          var reflow = this.offsetHeight;
+          $(this).
+            addClass('flip-in').
+            dequeue();
+        });
+
+    }
+    //# sourceURL=pen.js
+  </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="stylesheet" href="styles.css">
+    <title>Sorting Visualiser</title>
+  </head>
+  <body>
+    <h1 class="title"><a class="title" href="">Sorting visualizer</a></h1>
+    <div class="navbar" id="navbar">
+      <a id="random" onclick="RenderScreen()">Generate array</a>
+        <span class="options">
+            <select name="select sort algorithm" id="menu"
+                class="algo-menu">
+                <option value="0" class="arrayA" >Sort Algorithm</option>
+                <option value="1">Bubble Sort</option>
+                <option value="2">Selection Sort</option>
+                <option value="3">Insertion Sort</option>
+                <option value="4">Merge Sort</option>
+                <option value="5">Quick Sort</option>
+            </select>
+        </span>
+        <span class="options">
+            <select name="select array size" id="menu" class="size-menu">
+                <option value="0" class="arrayS" >Array Size</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+                <option value="60">60</option>
+                <option value="70">70</option>
+                <option value="80">80</option>
+               <option value="90">90</option>
+               <option value="100">100</option>
+           </select>
+       </span>
+       <span class="options">
+           <select name="speed of visualization" id="menu" class="speed-menu">
+               <option value="0" class="arraySP">Speed</option>
+               <option value="0.5">0.50x</option>
+               <option value="0.75">0.75x</option>
+               <option value="1">1.00x</option>
+               <option value="2">2.00x</option>
+               <option value="4">4.00x</option>
+           </select>
+       </span>
+       <a class="start">SORT</a>
+       <a class="icon"><i class="fa fa-bars"></i></a>
+   </div>
+   <div class="center">
+        <div class="frame" id="box">
+            <div class="array"></div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>
+          Created with <i class="fa fa-heart" style="color: #eb2c13"></i> by triangle
+            <br /><br />
+        </p>
+    </footer>
+    <script src="app.js" type="text/javascript"></script>
+    <script src="helper.js" type="text/javascript"></script>
+    <script src="sortalgo.js" type="text/javascript"></script>
+
+  </body>
+</html>
